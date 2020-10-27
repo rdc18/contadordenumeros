@@ -18,7 +18,7 @@ int main()
     //Menu
 
     while(opcao != 'x'){
-        printf("\n# CONTADOR E SOMADOR DE NÚMEROS #\n \n");
+        printf("\n# CONTADOR E SOMADOR DE NÚMEROS V1#\n \n");
         printf("Selecione uma opção:\n");
         printf("a - Adcionar números ao programa\n");
         printf("s - Exibir contagem e soma de números\n");
