@@ -1,6 +1,5 @@
 /* Desenvolvido por Renato de Castro
 Licença GPL
-
 ATENÇÃO DEV! nunca usar 'N' na variáveis 
 char, esse é seu valor padrão */
 
@@ -48,15 +47,23 @@ int main()
                 printf("\n \nForam digitados no total %d números \n", contagem);
                 printf("Foram excluidos %d números \n", excluidos);
                 printf("A soma dos números digitados é: %f \n", soma);
-                printf("\n \nPressione x e enter para retornar ao menu\n");
-                while(comando != 'x')
-                    comando = getchar();
+                printf("\n \nPressione enter para retornar ao menu\n");
+                while( (comando = getchar()) != '\n' && comando != EOF){
+                    continue;
+                }
+                comando = getchar();
                 comando = 'N';
                 break;
 
             //Exibir último número inserido
             case 'n':
                 printf("\n \n O último número inserido foi: %f \n", num);
+                printf("\n \nPressione enter para continuar\n");
+                while( (comando = getchar()) != '\n' && comando != EOF){
+                    continue;
+                }
+                comando = getchar();
+                comando = 'N';
                 if(num != 0)
                 {
                     printf("Deseja EXCLUI-LO? \n s - sim \n n - não\n");
@@ -81,9 +88,11 @@ int main()
                 printf("Licença GPL.\n");
                 printf("\nSomente é possível excluir o número inserdo mais recentemente. Se o processo\nfor realizado e questionado ao sistema qual o último número,\n");
                 printf("este retornará 0.0000000.");
-                printf("\n \nPressione x e enter para retornar ao menu\n");
-                while(comando != 'x')
-                    comando = getchar();
+                printf("\n \nPressione enter para retornar ao menu\n");
+                while( (comando = getchar()) != '\n' && comando != EOF){
+                    continue;
+                }
+                comando = getchar();
                 comando = 'N';
                 break;
 
